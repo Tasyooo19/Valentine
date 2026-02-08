@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Be My Valentine Baby?</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "Arial Rounded MT Bold", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #ffeef6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 30px;
+  padding: 24px;
+  text-align: center;
+  border: 3px solid #ffb6d5;
+  box-shadow: 0 15px 30px rgba(255, 111, 174, 0.25);
+}
+
+h1 {
+  color: #ff5fa2;
+  font-size: 26px;
+}
+
+img {
+  width: 100%;
+  border-radius: 20px;
+  margin: 15px 0;
+}
+
+.message {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  position: relative;
+  height: 120px;
+}
+
+button {
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#yesBtn {
+  background: #ff5fa2;
+  color: white;
+}
+
+#noBtn {
+  background: #eee;
+  position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>🎀 Will you be my Valentine? 🎀</h1>
+
+  <!-- CHANGE IMAGE -->
+  <img src="1stpage.jpg" alt="1stpage">
+
+  <p class="message">
+    Hi beb medjo pinaghirapan ko to, will you be my Valentine? Hehehehe[sana maawa ka sa bata sa pic] </p>
+
+  <div class="buttons">
+    <button id="yesBtn" onclick="goYes()">Yes 💕</button>
+    <button id="noBtn">No 🥺</button>
+  </div>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseenter", move);
+noBtn.addEventListener("touchstart", move);
+
+function move() {
+  noBtn.style.left = Math.random() * 240 + "px";
+  noBtn.style.top = Math.random() * 80 + "px";
+}
+
+function goYes() {
+  window.location.href = "memories.html";
+}
+</script>
+
+</body>
+</html>
